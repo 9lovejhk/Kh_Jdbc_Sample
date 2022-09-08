@@ -4,7 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
+// 변경해보게쓰빈다(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+// 변경해보게쓰빈다(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+// 변경해보게쓰빈다(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+// 변경해보게쓰빈다(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+// 변경해보게쓰빈다(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+// 변경해보게쓰빈다(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
 public class Common {
     final static String ORACLE_URL = "jdbc:oracle:thin:@localhost:1521:xe";
     final static String ORACLE_ID = "scott";
