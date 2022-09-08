@@ -1,37 +1,27 @@
 package cafe.vo;
 
-public class MenuVO {
-    private int menu_num;
-    private String menu;
-    private int menu_price;
+public class SizeVO {
+    private String menuSize;
+    private int sizePrice;
 
-    public MenuVO(int menu_num, String menu, int menu_price) {
-        this.menu_num = menu_num;
-        this.menu = menu;
-        this.menu_price = menu_price;
+    public SizeVO(String menuSize, int sizePrice) {
+        this.menuSize = menuSize;
+        this.sizePrice = sizePrice;
     }
 
-    public int getMenu_num() {
-        return menu_num;
+    public String getMenuSize() {
+        return menuSize;
     }
 
-    public void setMenu_num(int menu_num) {
-        this.menu_num = menu_num;
+    public void setMenuSize(String menuSize) {
+        this.menuSize = menuSize;
     }
 
-    public String getMenu() {
-        return menu;
+    public int getSizePrice() {
+        return sizePrice;
     }
 
-    public void setMenu(String menu) {
-        this.menu = menu;
-    }
-
-    public int getMenu_price() {
-        return menu_price;
-    }
-
-    public void setMenu_price(int menu_price) {
-        this.menu_price = menu_price;
+    public void setSizePrice(int sizePrice) {
+        this.sizePrice = sizePrice;
     }
 }

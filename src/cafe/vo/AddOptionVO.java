@@ -1,37 +1,37 @@
 package cafe.vo;
 
-public class MenuVO {
-    private int menu_num;
-    private String menu;
-    private int menu_price;
+public class AddOptionVO {
+    private int option_num;
+    private String option;
+    private int option_price;
 
-    public MenuVO(int menu_num, String menu, int menu_price) {
-        this.menu_num = menu_num;
-        this.menu = menu;
-        this.menu_price = menu_price;
+    public AddOptionVO(int option_num, String option, int option_price) {
+        this.option_num = option_num;
+        this.option = option;
+        this.option_price = option_price;
     }
 
-    public int getMenu_num() {
-        return menu_num;
+    public int getOption_num() {
+        return option_num;
     }
 
-    public void setMenu_num(int menu_num) {
-        this.menu_num = menu_num;
+    public void setOption_num(int option_num) {
+        this.option_num = option_num;
     }
 
-    public String getMenu() {
-        return menu;
+    public String getOption() {
+        return option;
     }
 
-    public void setMenu(String menu) {
-        this.menu = menu;
+    public void setOption(String option) {
+        this.option = option;
     }
 
-    public int getMenu_price() {
-        return menu_price;
+    public int getOption_price() {
+        return option_price;
     }
 
-    public void setMenu_price(int menu_price) {
-        this.menu_price = menu_price;
+    public void setOption_price(int option_price) {
+        this.option_price = option_price;
     }
 }
