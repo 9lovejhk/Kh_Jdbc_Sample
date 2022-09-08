@@ -119,13 +119,13 @@ public class MenuDAO {
         }
     }
 
-    public void orderInsert() {
+    public void customerOrder() {
         System.out.println("▶▶ 메뉴 주문 ㄱㄱ");
         System.out.print("메뉴번호 : ");
         int no = sc.nextInt();
         System.out.print("사이즈 : ");
         String name = sc.next();
-        System.out.print("메뉴금액 : ");
+        System.out.print("옵션 : ");
         int price = sc.nextInt();
 
         String sql = "INSERT INTO MENU(메뉴번호, 메뉴명, 메뉴금액) "
