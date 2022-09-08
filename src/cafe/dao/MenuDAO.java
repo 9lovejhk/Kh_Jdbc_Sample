@@ -240,7 +240,9 @@ public class MenuDAO {
                     "AND CUSTOMER_ORDER.사이즈 = OPTION_SIZE.사이즈";
             rs = stmt.executeQuery(sql_basket);
 
-            System.out.println("========== [장바구니] ==========");
+            System.out.println();
+            int total = 0;
+            System.out.println("=============== [장바구니] ===============");
             System.out.println("  (메뉴명)  (사이즈) (선택한 옵션) (수량) (합계)");
             while (rs.next()) {
                 System.out.printf("%10s ", rs.getString("메뉴명"));
@@ -248,8 +250,10 @@ public class MenuDAO {
                 System.out.printf("%-10s", rs.getString("옵션추가"));
                 System.out.printf("%4d", rs.getInt("수량"));
                 System.out.printf("%9d", rs.getInt("합계"));
+                total += rs.getInt("합계");
                 System.out.println();
             }
+            System.out.println("결제할 금액은 " + total + "원 입니다.");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -257,5 +261,19 @@ public class MenuDAO {
         Common.close(rs);
         Common.close(stmt);
         Common.close(conn);
+    }
+
+    public void endOrder() {
+        MenuDAO dao = new MenuDAO();
+
+        String sql = "DELETE FROM CUSTOMER_ORDER";
+
+        try {
+            conn = Common.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

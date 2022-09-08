@@ -62,6 +62,7 @@ public class CafeMain {
             } // switch(sel)
 
             while (true) {
+                System.out.println();
                 System.out.print("[1]주문 추가하기 [2]장바구니 가기 [3]주문 종료 : ");
                 int add_sel = sc.nextInt();
                 switch(add_sel) {
@@ -73,6 +74,7 @@ public class CafeMain {
                         break;
                     case 3:
                         System.out.println("주문을 종료 합니다");
+                        dao.endOrder();
                         return;
                 } // switch(add_sel)
             }
