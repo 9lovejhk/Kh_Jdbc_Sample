@@ -9,7 +9,7 @@ public class CafeMain {
     public static void main(String[] args) {
 //        masterSelect();
         customerSelect();
-        System.out.println("테스트테스틑");
+        System.out.println("테스트테스틑222");
 
     }
 
