@@ -5,6 +5,7 @@ import cafe.vo.MenuVO;
 
 import java.util.*;
 
+// 보이시나요,,,, 네ㅔ....하위루..(o゜▽゜)o☆
 public class CafeMain {
     public static void main(String[] args) {
 //        masterSelect();
@@ -13,7 +14,6 @@ public class CafeMain {
 
     }
 
-    // 보이시나요,,,,
 
 
     
