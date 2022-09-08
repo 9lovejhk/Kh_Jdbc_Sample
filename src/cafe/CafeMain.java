@@ -7,16 +7,17 @@ import java.util.*;
 
 public class CafeMain {
     public static void main(String[] args) {
-//        masterSelect();
-        customerSelect();
+        masterSelect();
+//        customerSelect();
     }
     public static void masterSelect() {
         Scanner sc = new Scanner(System.in);
         MenuDAO dao = new MenuDAO();
         while(true) {
-            System.out.println("========== [MENU TABLE] ==========");
+            System.out.println("========== [관리자 계정] ==========");
             System.out.println("▶▶ 실행할 작업을 선택하세요");
-            System.out.println("[1]메뉴판 보기, [2]메뉴 추가하기, [3]메뉴 삭제하기, [4]메뉴 정보 수정하기, [5]작업 종료 : ");
+            System.out.print("[1]메뉴판 보기\n[2]메뉴 추가하기\n[3]메뉴 삭제하기\n[4]메뉴 정보 수정하기\n[5]작업 종료 : ");
+            System.out.println();
             int sel = sc.nextInt();
             switch(sel) {
                 case 1:
@@ -33,7 +34,7 @@ public class CafeMain {
                     dao.menuUpdate();
                     break;
                 case 5 :
-                    System.out.println("작업을 종료 합니다.");
+                    System.out.println("관리자 계정 로그아웃");
                     return;
             }
         }

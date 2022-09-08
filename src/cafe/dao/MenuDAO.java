@@ -5,7 +5,6 @@ import cafe.vo.*;
 
 import java.sql.*;
 import java.util.*;
-//룰룰랄라 신나는 시간 \(@^0^@)/(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ヽ(✿ﾟ▽ﾟ)ノ
 
 public class MenuDAO {
     Connection conn = null;
@@ -42,12 +41,15 @@ public class MenuDAO {
     }
 
     public void menuSelectRst (List<MenuVO> list) {
+        System.out.println("========== [메뉴판] ==========");
+        System.out.println("(메뉴번호)   (메뉴명)   (메뉴금액)");
         for(MenuVO e : list) {
             System.out.printf("%7d  ", e.getMenu_num());
             System.out.printf("%10s", e.getMenu());
             System.out.printf("%9d", e.getMenu_price());
             System.out.println();
         }
+        System.out.println();
     }
 
     public void menuInsert() {
@@ -97,19 +99,21 @@ public class MenuDAO {
 
     public void menuUpdate() {
         System.out.println("▶▶ 금액을 변경할 메뉴를 선택하세요");
+        System.out.print("메뉴번호 : ");
+        int no = sc.nextInt();
         System.out.print("메뉴명 : ");
         String name = sc.next();
         System.out.print("메뉴금액 : ");
         int price = sc.nextInt();
 
-        String sql = "UPDATE MENU SET 메뉴명 = ?, 메뉴금액 = ? WHERE 메뉴명 = ?";
+        String sql = "UPDATE MENU SET 메뉴명 = ?, 메뉴금액 = ? WHERE 메뉴번호 = ?";
 
         try {
             conn = Common.getConnection();
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1,name);
             pstmt.setInt(2,price);
-            pstmt.setString(3,name);
+            pstmt.setInt(3,no);
             int ret = pstmt.executeUpdate();
             System.out.println("Return : " + ret);
         } catch (Exception e) {
